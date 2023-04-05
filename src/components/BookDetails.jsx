@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 const BookDetails = () => {
   const bookData = useLoaderData();
   const [fold, setFold] = useState(true);
-  console.log(bookData);
+  //   console.log(bookData);
   const { image, title, desc, authors, publisher, year, rating, url, price } =
     bookData;
+
+  const navigation = useNavigation();
+
+  //   if (navigation.state === "loading") {
+  //     return <LoadingSpinner />;
+  //   }
 
   return (
     <div className="my-container">

@@ -1,9 +1,15 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import Book from "./Book";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Books = () => {
   const { books } = useLoaderData();
+  const navigation = useNavigation();
+
+  // if (navigation.state === "loading") {
+  //   return <LoadingSpinner />;
+  // }
 
   return (
     <div className="lg:py-20 py-8 m-4">
