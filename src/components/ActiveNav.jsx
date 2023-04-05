@@ -1,0 +1,17 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const ActiveNav = ({ to, children }) => {
+  return (
+    <div>
+      <NavLink
+        to={to}
+        className={({ isActive }) => (isActive ? "active" : "default")}
+      >
+        {children}
+      </NavLink>
+    </div>
+  );
+};
+
+export default ActiveNav;
