@@ -8,10 +8,14 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  ">
       <Header />
-      <Outlet />
-      <Footer />
+      <div className="min-h-[calc(100vh-152px)]">
+        <Outlet />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
